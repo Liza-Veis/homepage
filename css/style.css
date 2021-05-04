@@ -2,6 +2,7 @@
 
 body {
   font-family: 'Poppins';
+  -webkit-tap-highlight-color: rgba(217, 232, 253, 0.3);
 }
 
 ::selection {
@@ -75,9 +76,11 @@ li:not(:last-child) {
   transition: transform 0.3s;
 }
 
-#resume-main a:hover::before {
-  transform-origin: 0% 50%;
-  transform: scale3d(1, 1, 1);
+@media (hover: hover) and (pointer: fine) {
+  #resume-main a:hover::before {
+    transform-origin: 0% 50%;
+    transform: scale3d(1, 1, 1);
+  }
 }
 
 .name {
@@ -234,8 +237,10 @@ li:not(:last-child) {
   transition: background-color 0.2s ease;
 }
 
-.contacts li a:hover::before {
-  background-color: #d9e8fd;
+@media (hover: hover) and (pointer: fine) {
+  .contacts li a:hover::before {
+    background-color: #d9e8fd;
+  }
 }
 
 .contacts li a .icon {
